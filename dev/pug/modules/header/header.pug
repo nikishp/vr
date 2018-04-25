@@ -1,0 +1,104 @@
+mixin header(name)
+  - name = name || ''
+  header(class="header " + name)
+    .universall-line   
+      .container  
+        .row.row--universall
+          .universall-line__item 
+            .logo 
+              img(src="img/content/logo.png", alt="logo") 
+          .universall-line__item 
+            .nav   
+              ul.nav__list
+                li.nav__item.nav__item--active
+                  a.nav__link(href="#") Акция
+                li.nav__item
+                  a.nav__link(href="#") Игры
+                li.nav__item
+                  a.nav__link(href="#") Цены
+                li.nav__item
+                  a.nav__link(href="#") Забронировать
+                li.nav__item
+                  a.nav__link(href="#") Контакты
+          .universall-line__item
+            a.phone(href="tel:+380996514812") 
+              +svg('phone')
+              | +380 996-514-812
+            a.recall.popup-js(href="#recall") 
+              span Позвоните нам
+
+    .container
+      .row
+        .col
+          h1.h1.h1--top Клуб VR в Одессе 
+          .slogan 
+            span ПОПРОБУЙ НА ВКУС  <br> 
+            span ВИРТУАЛЬНУЮ РЕАЛЬНОСТЬ
+          .subtitle Получи улётные эмоции наяву - играй один и с друзьями
+        
+      .row
+        .col.col--header-block-row
+          .header-block.header-block--f
+            .header-block__title &gt; 25
+            .header-block__desc Захватывающих игр  на разные  тематики
+          .header-block.header-block--s
+            .header-block__title Сетевой режим
+            .header-block__desc С участием 4-х человек одновременно        
+      .row
+        .col.col--header-block-row2
+          .header-block.header-block--t
+            .header-block__title 
+              span НТС 
+              | vive
+            .header-block__desc Шлемы с полным погружением
+          .header-block.header-block--fr
+            .header-block__title Цена
+            .header-block__desc Самая низкая в городе
+
+      .row
+        .col
+          .btn-block.btn-block--header
+            .btn-wrap
+              a.btn(href="#") Забронировать время
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- 

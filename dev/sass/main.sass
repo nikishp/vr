@@ -1,0 +1,344 @@
+/* lead-up style */
+//retina
+// https://github.com/strues/retinajs
+// для использования доставляем дата атрибут data-rjs="3", в бекграундах используем миксин
+// +retina('../img/general/', 3, cover, center center no-repeat)
+//@import "../libs/retina/_retina.sass"
+
+@import "smart-grid"
+@import "variabls"
+@import "mixin"
+@import "font"
+@import "sprite"
+//@include retina-sprites($retina-groups) //раскоменить для ретины
+@import "same_style"
+
+// @import "pixel-glass"
+
+/* lead-up style end */
+
+/* blocks style */
+
+/* head */
+@import "../pug/modules/header/header"
+
+/* foot */
+@import "../pug/modules/foot/foot"
+
+/* forms */
+@import "../pug/modules/forms/forms"
+
+/* menu */
+@import "../pug/modules/menu/menu"
+
+/* blocks style end*/
+
+
+//.fotorama__arr, .fotorama__fullscreen-icon, .fotorama__video-close, .fotorama__video-play
+  background-image: url('../img/general/fotorama.png')
+  background-repeat: no-repeat
+
+//smartgrid settings 
+.container
+  +container()
+.row
+  +row()
+.col
+  +col()
+  +cols(12)
+  
+.wrapper
+  max-width: 1920px
+  width: 100%
+  margin-left: auto
+  margin-right: auto
+
+/* page style */
+
+
+.check
+  position: relative
+  z-index: 1
+  margin-top: -150px
+  padding-top: 150px
+  padding-bottom: 100px
+  color: $f
+  background-color: $def
+  background-image: url(../img/general/check_l.png), url(../img/general/check_r.png), url(../img/general/check_man.png)
+  background-repeat: no-repeat, no-repeat, no-repeat
+  background-position: left 0, right 0, 54% 261px
+  overflow: hidden
+  +lg-block()
+    background-image: url(../img/general/check_l.png), url(../img/general/check_r.png)
+    background-repeat: no-repeat, no-repeat
+    background-position: left 0, right 0
+  +md-block()
+    background-image:  url(../img/general/check_r.png)
+    background-repeat:  no-repeat
+    background-position: right 0
+  +xs-block()
+    padding-top: 200px
+  .h2
+    margin-bottom: 250px
+    +lg-block()
+      margin-bottom: 40px
+.container--check
+  max-width: 1270px
+.chekc__item
+  +col()
+  +cols(4)
+  +cols-md(12)
+  font-size: 18px;
+  line-height: 1.389;
+  text-align: justify
+
+
+
+.chekc__option
+  position: relative
+  min-height: 110px
+  display: flex
+  align-items: center
+  margin-bottom: 20px
+  +md-block()
+    min-height: 0
+  &::before
+    content: ''
+    position: absolute
+    top: 50%
+    width: 333px
+    height: 87px
+.chekc__option--left
+  padding-left: 60px
+  &::before
+    right: 100%
+    transform: translateX(70px) translateY(-50%)
+    background: url(../img/general/dot_l.png)
+    background-repeat: no-repeat
+
+.chekc__option--right
+  padding-right: 60px
+  &::before
+    left: 100%
+    transform: translateX(-70px)  translateY(-50%)
+    background: url(../img/general/dot_r.png)
+    background-repeat: no-repeat
+
+.check__img
+  display: none
+  +lg-block()
+    display: block
+    text-align: center
+    img
+      width: 300px
+
+
+
+.check__subtitle
+  margin-top: 70px
+  font-size: 30px
+  font-weight: bold;
+  text-align: center
+
+
+.check__btn
+  margin-top: 40px
+
+
+
+.cool
+  padding: 80px 0
+
+  background-image: url(../img/general/cool_l.png), url(../img/general/cool_r.png)
+  background-repeat: no-repeat, no-repeat
+  background-position: left 0, right 0
+  +md-block()
+    background: none
+
+  .h2
+    color: $def
+    +md-block()
+      line-height: 1.4
+    &::after
+      width: 260px
+      height: 3px
+      +dottedBorder($color: $def, $orientation: horizontal, $position: bottom, $spacing: 7px, $size: 2px)
+
+
+.cool__subtitle
+  margin-top: 35px
+  margin-bottom: 60px
+  text-align: center
+  font-size: 22px
+  line-height: 28px
+  +md-block()
+    font-size: 20px
+
+.cool__content
+  display: flex
+  justify-content: center
+  align-items: center
+  +md-block()
+    flex-wrap: wrap
+
+.cool__option
+  max-width: 430px
+  width: 100%
+  margin-left: 40px
+  font-size: 24px
+  line-height: 30px
+  +md-block()
+    margin-top: 40px
+    margin-left: 0
+    font-size: 20px
+.cool__option-item
+  display: flex
+  margin-bottom: 26px
+  +md-block()
+    margin-bottom: 15px
+  b
+    margin-right: 5px
+
+.cool__foot
+  max-width: 800px
+  width: 100%
+  margin-top: 50px
+  margin-left: auto
+  margin-right: auto
+  text-align: center
+  font-size: 26px
+  line-height: 31px
+  +md-block()
+    font-size: 20px
+    line-height: 1.2
+
+
+.discount
+  position: relative
+  // padding-top: 6vw
+  // padding-bottom: 8.8vw
+  color: #fff
+  font-size: 0
+  // background: green
+  // background-image: url(../img/general/top.png), url(../img/general/bot.png)
+  background-repeat: no-repeat, no-repeat
+  background-position: center 0, center 100%
+  background-size: contain
+.discount__man-img
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  z-index: 3
+  max-width: 320px
+  display: flex
+  align-items: center
+  margin: auto
+  // background: red
+.discount__content
+  position: relative
+  padding: 30px 0
+  font-size: 16px
+  background: $def
+  // background: red
+/* page style end */
+
+.count__arrow
+  position: absolute
+  top: 90%
+  left: 28%
+
+.discount__item
+  +col()
+  +cols(6)
+  font-size: 24px
+
+
+.discount__title
+  position: relative
+  max-width: 400px
+  font-size: 88px
+  font-weight: bold
+  text-align: center
+  line-height: 1
+  &::before
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    top: 31px
+    // height: 56px
+    background: #ef4949
+    z-index: 1
+
+  span
+    position: relative
+    z-index: 2
+
+.discount__text
+  margin: 30px 0 20px
+
+.discount__action
+  color: $yel
+  span
+    display: block
+    font-size: 38px
+    line-height: 1
+    font-weight: 800
+
+
+
+.discount__celeb
+  margin: 30px 0
+  span
+    padding: 5px
+    color: $def
+    background: $yel
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media style*/
+@import "media"

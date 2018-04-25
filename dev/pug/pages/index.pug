@@ -1,0 +1,83 @@
+extends ../layout/main
+
+block head 
+  - var title = 'Главная'
+  - var bodyClass = ''
+block content
+  section.check
+    .container.container--check
+      .row
+        .col
+          h2.h2 ПРОВЕРЬ, <br> НА ЧТО ТЫ СПОСОБЕН С ПОМОЩЬЮ <span>VR</span>
+        .chekc__item
+          .chekc__option.chekc__option--left Спрыгнуть с небоскрёба без парашюта или взобраться на Эверест?
+          .chekc__option.chekc__option--left Стать защитником Вселенной или поучаствовать в боксёрском турнире?
+          .chekc__option.chekc__option--left Превратиться в птицу или уничтожить злобных зомби?
+        .chekc__item
+          .check__img
+            img(src="img/general/check_man.png", alt="image") 
+        .chekc__item
+          .chekc__option.chekc__option--right Шлем нового поколения HTC VIVE создаёт иллюзию полного погружения в виртуальную реальность – все движения один к одному.
+          .chekc__option.chekc__option--right Мозг воспринимает всё как наяву – ты переживаешь те же эмоции, те же впечатления, которые получил бы в настоящей жизни.
+
+          .chekc__option.chekc__option--right Естественное поле зрения на 110 градусов. Нет ни выпадающих кадров, ни разрыва изображения – всё по-настоящему.
+
+      .row
+        .col
+          .check__subtitle Пощекочи себе нервы – теперь тебе всё по плечу!
+          .check__btn
+            .btn-block
+              .btn-wrap
+                a.btn(href="#") Забронировать время
+
+
+
+  section.cool
+    .container
+      .row
+        .col
+          h2.h2 ВИРТУАЛЬНАЯ РЕАЛЬНОСТЬ – 
+            span ЭТО ДЕЙСТВИТЕЛЬНО КРУТО  
+          .cool__subtitle В виртуальной реальности ты можешь сделать то, чего всю жизнь боялся и <br> о чём всегда мечтал. Причём безопасно и не выезжая из города.
+
+          .cool__content
+            .cool__img
+              img(src="img/general/cool_img.png", alt="image")
+            .cool__option
+              .cool__option-item 
+                b 1.
+                | Надеваешь шлем VR
+              .cool__option-item 
+                b 2.
+                | Берёшь в руки два беспроводных джойстика
+              .cool__option-item 
+                b 3.
+                | Погружаешься в виртуальность – реальный мир перестаёт для тебя существовать.
+
+          .cool__foot Ты уничтожаешь роботов, посещаешь экзотические страны, борешься со стихией и монстрами. Всё это на площади 10 м2. Хотя тебе будет казаться, что нет никаких стен и пространства бесконечны.
+
+  section.discount
+    .discount__man-img
+      img(src="img/general/discount_l_img.png", alt="image")
+    img.discoun__mimg(src="img/general/top.png", alt="image")
+    .discount__content
+      .container
+        .row
+          .discount__item
+            .discount__title 
+              span АКЦИЯ!
+            .discount__text Приобрети один час игры и получи ещё  
+            .discount__action
+              span 1 час в ПОДАРОК
+              | и постоянную скидочную карту!
+            .discount__celeb В честь открытия клуба. 
+              span Только до 25 мая
+            .discount__count
+              .count__arrow
+                img(src="img/general/lfy_arrow.png", alt="image")
+              .count__title До конца акции осталось:
+              #clock.counter
+          .discount__item
+            - formTitle = 'Блок акция Отправьте свои данные и получите номер бонусной карты на электронную почту'
+            +vis_form('', '')
+    img.discoun__mimg(src="img/general/bot.png", alt="image")
