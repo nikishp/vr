@@ -5,7 +5,7 @@ html(lang="ru-RU")
   head
     block head
     +head()
-  body.thank-page
+  body.thank-page(style="background: #151635 ")
     //+header()
     block content  
     //+foot()
@@ -21,11 +21,11 @@ html(lang="ru-RU")
       //- });
       
       //function to return main page
-      var curId = localStorage.getItem('form');
-      var currentPage = localStorage.getItem('currentPage');
+      //- var curId = localStorage.getItem('form');
+      //- var currentPage = localStorage.getItem('currentPage');
       setTimeout(function(){
-        //- window.location.href = 'index.html#' + curId;
-        window.location.href = currentPage;
+        window.location.href = 'index.html';
+        //- window.location.href = currentPage;
       }, 3000);
 
     //- call auto download file

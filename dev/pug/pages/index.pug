@@ -28,7 +28,7 @@ block content
           .check__btn
             .btn-block
               .btn-wrap
-                a.btn(href="#") Забронировать время
+                a.btn.easyscroll(href="#pricing") Забронировать время
 
 
 
@@ -56,7 +56,7 @@ block content
 
           .cool__foot Ты уничтожаешь роботов, посещаешь экзотические страны, борешься со стихией и монстрами. Всё это на площади 10 м2. Хотя тебе будет казаться, что нет никаких стен и пространства бесконечны.
 
-  section.discount
+  section.discount#discount
     .discount__man-img
       img(src="img/general/discount_l_img.png", alt="image")
     img.discoun__mimg(src="img/general/top.png", alt="image")
@@ -81,3 +81,188 @@ block content
             - formTitle = 'Блок акция Отправьте свои данные и получите номер бонусной карты на электронную почту'
             +vis_form('', '')
     img.discoun__mimg(src="img/general/bot.png", alt="image")
+
+
+  section.video#video
+    .container
+      .row
+        .col
+          .video__title ПОПРОБУЙ СЫГРАТЬ В ЭТИ ИГРЫ
+            .video__sl-controll
+              .sl-controll__item.sl-controll__item--prev 
+                +svg('prev')
+              .sl-controll__item.sl-controll__item--next
+                +svg('next')
+
+    .video__sl
+      .video__item-wrap
+        .video__item(data-youtube='jShFcusbLpM')
+      .video__item-wrap
+        .video__item(data-youtube='lqb_KQtob6Y')
+      .video__item-wrap
+        .video__item(data-youtube='Kuy17LO14OA')
+      .video__item-wrap
+        .video__item(data-youtube='zVWPgAoaCtI')
+      .video__item-wrap
+        .video__item(data-youtube='k4MYqFw2KYg')
+      .video__item-wrap
+        .video__item(data-youtube='T6hM5aDU6wE')
+      .video__item-wrap
+        .video__item(data-youtube='ClUFJlGBuME')
+      .video__item-wrap
+        .video__item(data-youtube='WZ6xrfFuxmI')
+
+
+    //- 
+
+
+  section.pricing#pricing
+    .pricing__top: img(src="img/general/pricing_top.png", alt="image")
+    .pricing__content
+      .container
+        .row
+          .col
+            h2.h2 СКОЛЬКО СТОИТ <span>ДРАЙВ?</span>
+
+            div(style='clear:both;')
+            iframe#fhesus46857(src='https://hesus.ru/hesus/visor2/id/6857', style='width: 100%;height:773px;margin: 0 auto;display: block;', frameborder='0', marginheight='0', marginwidth='0')
+            div(style='clear:both;')
+            // BEGIN BUKZA CODE
+            #BukzaContainer
+            script(type='text/javascript').
+              (function(){
+              var d = document;
+              var w = window;
+              function l() {
+              var s = d.createElement('script');
+              s.type = 'text/javascript';
+              s.async = true;
+              s.src = 'https://bukza.com/api/script/generate/4480/5302/BukzaContainer';
+              var ss = d.getElementsByTagName('script')[0];
+              ss.parentNode.insertBefore(s, ss);
+              }
+              if (d.readyState == 'complete') {
+              l();
+              } else {
+              if (w.attachEvent) {
+              w.attachEvent('onload', l);
+              } else {
+              w.addEventListener('load', l, false);
+              }
+              }
+              })();
+            // END BUKZA CODE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      .pricing__bot: img(src="img/general/pricing_bot.png", alt="image")
+
+
+  section.why
+    .container
+      .row
+        .col
+          h2.h2 ПОЧЕМУ ТЕБЕ СТОИТ ПРИЙТИ ИМЕННО В 
+            span НАШ КЛУБ
+        .why__item.why__item--f
+          .why__item-title 10 минут
+          .why__item-desc  Пешком от Дерибасовской
+
+        .why__item.why__item--s
+          .why__item-title 4-6
+          .why__item-desc  Комфортное место для 4-6 человек
+
+        .why__item.why__item--t
+          .why__item-title Вкусняшки
+          .why__item-desc  Чай, кофе, конфеты - ты не заскучаешь
+
+        .why__item.why__item--fr
+          .why__item-title Команда
+          .why__item-desc  Устраивай баталии с другими клубами
+
+      .row.row--why
+        .why__not-item
+          .why__not-item-img: img(src="img/general/why_img.jpg", alt="image")
+
+        .why__not-item
+          .why__not-title: span Но это ещё не всё!
+          .why__not-desc Если на протяжении 10 мин сеанса тебе и/или твоим друзьям не понравится виртуальная реальность, то мы вернём ваши деньги.
+
+  section.emotions
+    .emotions__top: img(src="img/general/pricing_top.png", alt="image")
+    .emotions__content
+      .container
+        .row
+          .col
+            h2.h2 Не терпится получить не изведанные эмоции?
+
+
+
+          - formTitle = 'Не терпится получить не изведанные эмоции?'
+          +vis_form2('form--darken', '')
+
+
+
+
+  section.find#find
+    .find__top: img(src="img/general/find_top.png", alt="image")
+    .find__content
+      .container
+        .row
+          .col
+            h2.h2 Как нас найти
+        .row.row--find
+          .find__item.find__item--info
+            a.find__option.find__option--phone(href="tel:+380996514812")
+              +svg('phone')
+              span +380 996-514-812
+            .find__option.find__option--marker
+              +svg('point')
+              span г. Одесса, ул. Асташкина 15
+            a.find__option.find__option--mail(href="mailto:vrzoneodessa@gmail.com")
+              +svg('mail')
+              span vrzoneodessa@gmail.com
+
+          .find__item.find__item--map
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2747.5570340519007!2d30.72143901559164!3d46.477281479125914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c6318e6971a2b9%3A0x7753be513cf72670!2z0YPQuy4g0JDRgdGC0LDRiNC60LjQvdCwLCAxNSwg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1524693547534" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      .find__bot: img(src="img/general/top.png", alt="image")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- 

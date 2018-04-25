@@ -115,6 +115,7 @@ h1,h2,h3,h4,h5,h6
   +xs-block()
     font-size: 24px
   span
+    display: inline-block
     padding: 5px
     color: $def
     background: $yel
@@ -186,8 +187,12 @@ button[type='submit']
     align-items: center
     background: $blue
     +size(70)
+    +xsm-block()
+      +size(55)
     &:not(:last-child)
       margin-right: 45px
+      +xsm-block()
+        margin-right: 35px
       &::before
         content: ':'
         position: absolute
@@ -196,6 +201,9 @@ button[type='submit']
         font-size: 43px
         color: $blue
         animation: blinking 1s infinite cubic-bezier(1,-1.29, 1, 1)
+        +xsm-block()
+          top: 5px
+          right: -28px
     &::after
       position: absolute
       bottom: 100%

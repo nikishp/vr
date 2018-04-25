@@ -251,9 +251,14 @@
 .discount__item
   +col()
   +cols(6)
+  +cols-md(12)
   font-size: 24px
-
-
+  text-align: center
+  .form
+    +md-block()
+      margin-top: 40px
+      margin-left: auto
+      margin-right: auto
 .discount__title
   position: relative
   max-width: 400px
@@ -261,6 +266,11 @@
   font-weight: bold
   text-align: center
   line-height: 1
+  +md-block()
+    margin-left: auto
+    margin-right: auto
+  +xsm-block()
+    font-size: 70px
   &::before
     content: ''
     position: absolute
@@ -295,6 +305,8 @@
     padding: 5px
     color: $def
     background: $yel
+    +xsm-block()
+      display: inline-block
 
 
 
@@ -304,6 +316,99 @@
 
 
 
+.video
+  padding: 90px 0
+
+.video__title
+  position: relative
+  margin-bottom: 50px
+  padding: 0 90px
+  font-size: 36px
+  color: rgb(21, 22, 53);
+  font-weight: bold;
+  line-height: 1.222;
+  text-align: center;
+  +md-block()
+    padding: 0
+
+.video__sl-controll
+  position: absolute
+  top: 0
+  right: 0
+  display: flex
+  +md-block()
+    position: static
+    margin-top: 30px
+    justify-content: center
+.sl-controll__item
+  width: 45px;
+  height: 45px;
+  display: flex
+  justify-content: center
+  align-items: center
+  transition: $tr
+  cursor: pointer
+  background-color: rgb(241, 249, 253)
+  +md-block()
+    background: darken(rgb(241, 249, 253),14%)
+  .svg
+    fill: darken(#d1d9dc,10%)
+    +size(10)
+    transition: $tr
+    +md-block()
+      fill: #fff
+      +size(20)
+  &:hover
+    background: #2c94ff
+    .svg
+      fill: #fff
+  
+
+
+
+
+
+
+
+.video__item
+  position: relative
+  background: #000
+  background-repeat: no-repeat
+  background-position: center
+  background-size: 100% 100% //нужно играться с этими параметрами что бы убрать черные полоски
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+.video__item-height
+  padding-top: 56.25% //высотой верхнего паддинга задаем соотношение сторон
+.video__item-mask
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 10
+  width: 100%
+  height: 100%
+  cursor: pointer
+  background-color: rgba(0, 0, 0, 0.2)
+  &:hover
+    .svg__youtube-fill
+      fill: #f00
+      fill-opacity: 1
+.svg__youtube
+  position: absolute
+  top: 50%
+  left: 50%
+  width: 68px //"стандартыне" размера кнопки 
+  height: 48px //"стандартыне" размера кнопки
+  transform: translateX(-50%) translateY(-50%)
+  z-index: 10
+.svg__youtube-fill
+  fill: #212121
+  fill-opacity: .8
+  transition: fill .1s cubic-bezier(0.4,0.0,1,1), fill-opacity .1s cubic-bezier(0.4,0.0,1,1)
 
 
 
@@ -312,29 +417,224 @@
 
 
 
+.pricing
+  font-size: 0
+  .h2
+    margin-bottom: 60px
+
+.pricing__top
+  // background: red
+.pricing__content
+  position: relative
+  padding-bottom: 100px
+  font-size: 16px
+  background-color: $def
+  background-image: url(../img/general/pricing_l.png), url(../img/general/pricing_r.png)
+  background-repeat: no-repeat, no-repeat
+  background-position: left 0, right 0
+  +md-block()
+    background-image: none
+.pricing__bot
+  position: absolute
+  left: 0
+  bottom: 0
+  font-size: 0
+
+
+
+.why
+  padding: 80px 0
+  background-image: url(../img/general/why_l.png)
+  background-repeat: no-repeat
+  background-position: left 0
+  +lg-block()
+    background: none
+  .h2
+    color: $def
+    span
+      display: inline-block
+
+
+.why__item
+  +col()
+  +cols(3)
+  +cols-md(6)
+  +cols-xs(12)
+  margin-top: 50px
+  padding-top: 30px
+  text-align: center
+  background-repeat: no-repeat
+  background-position: center 0
+.why__item--f
+  background-image: url(../img/general/why_ico_1.png)
+.why__item--s
+  background-image: url(../img/general/why_ico_2.png)
+.why__item--t
+  background-image: url(../img/general/why_ico_3.png)
+.why__item--fr
+  background-image: url(../img/general/why_ico_4.png)
+
+.why__item-title
+  font-size: 42px
+  font-weight: bold
+  color: #2c94ff
+
+.why__item-desc
+  margin-top: 20px
+  font-size: 19px
+
+
+.row--why
+  align-items: center
+  margin-top: 80px
+  +md-block()
+    flex-direction: row-reverse
+    flex-direction: column-reverse
+.why__not-item
+  +col()
+  +cols(8)
+  +cols-md(12)
+  text-align: center
+  &:first-child
+    +cols(4)
+    +cols-md(12)
+    margin-top: 40px
+
+
+.why__not-title
+  font-weight: bold
+  font-size: 32px
+  span
+    display: inline-block
+    padding: 0 10px
+    background: $yel
+
+
+.why__not-desc
+  margin: 20px 0
+  font-size: 22px
+
+
+
+.emotions
+
+
+.emotions__content
+  padding-top: 30px
+  padding-bottom: 70px
+  background-color: $def
+  background-image: url(../img/general/pricing_l.png), url(../img/general/pricing_r.png)
+  background-repeat: no-repeat, no-repeat
+  background-position: left 0, right 0
+  +md-block()
+    // background: none
+    background-image: none
+  .h2
+    margin-bottom: 60px
+.emotions__top
+  // background: red
+  font-size: 0
+
+
+
+.form--darken
+  margin-left: auto
+  margin-right: auto
+  .form__subtitle
+    color: #bababf
+
+  .form__item 
+    input
+      background-color: #373851;
+
+
+
+.find__top
+  font-size: 0
+  background: $def
+
+.find__content
+  position: relative
+  // background: green
+  .h2
+    margin-bottom: 50px
+    color: $def
+
+
+.row--find
+  align-items: center
+.find__item
+  +col()
+
+.find__item--info
+  +cols(4)
+  +cols-md(12)
+  +md-block()
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+.find__item--map
+  +cols(8)
+  +cols-md(12)
+
+
+.find__option
+  display: block
+  text-align: center
+  font-size: 20px
+  font-weight: 100
+  +md-block()
+    width: calc(33.33% - 20px)
+    margin-left: 10px
+    margin-right: 10px
+  +sm-block()
+    width: calc(50% - 20px)
+  +xs-block()
+    width: 100%
+  .svg
+    +size(60)
+    fill: $blue
+  span
+    display: block
+
+  &:not(:last-child)
+    margin-bottom: 40px
+
+.find__item--map
+  iframe
+    width: 100%
+  +md-block()
+    margin-top: 40px
+
+
+
+.find__bot
+  position: absolute
+  left: 0
+  bottom: 0
+  font-size: 0
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.popup-form
+  position: relative
+  max-width: 520px
+  margin-left: auto
+  margin-right: auto
+  padding: 30px
+  color: $def
+  background: $def
+  border-radius: 13px
+  border: 1px solid $blue
+  // background: #fff
+  .form__title,.form__subtitle
+    // color: $def
+  .mfp-close
+    color: #fff
+    // background: red
+.form__item--btn
+  height: auto
 
 
 

@@ -27,6 +27,9 @@ var settings = {
     xs: {
       width: "576px"
     },
+      xsm: {
+      width: "420px"
+    },
     xxs: {
       width: "380px"
     }

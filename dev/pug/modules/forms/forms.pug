@@ -58,7 +58,7 @@ mixin form_default(formClass,formId)
 mixin vis_form(formClass,formId)
   - formClass = formClass || ''
   - formId = formId || ''
-  form(class='form form-site' + formClass, id=''+formId, action='#', enctype='multipart/form-data')
+  form(class='form form-site ' + formClass, id=''+formId, action='#', enctype='multipart/form-data')
     // Hidden Required Fields
     input(name='form_subject', value='' + formTitle, type='hidden')
     // END Hidden Required Fields
@@ -76,3 +76,24 @@ mixin vis_form(formClass,formId)
               .btn-wrap
                 //- a.btn(href="#") Забронировать время
                 button(type='submit').btn получить час игры бесплатно
+
+mixin vis_form2(formClass,formId)
+  - formClass = formClass || ''
+  - formId = formId || ''
+  form(class='form form-site ' + formClass, id=''+formId, action='#', enctype='multipart/form-data')
+    // Hidden Required Fields
+    input(name='form_subject', value='' + formTitle, type='hidden')
+    // END Hidden Required Fields
+    .form__subtitle  Прямо сейчас забронируй удобное время игры и приходив наш клуб виртуальной реальности. Тебе понравится. Попробуй…
+    ul.form__list
+      li.form__item
+        input(type='text', required='', name='name', placeholder='Ваше имя и фамилия *')
+      li.form__item
+        input(type='tel', required='', name='phone', class="phone_input", placeholder='Ваш номер телефона *')
+      li.form__item
+        input(type='email', required='', name='mail', placeholder='Ваш Email *') 
+      li.form__item.form__item--btn
+       .btn-block
+          .btn-wrap
+            //- a.btn(href="#") Забронировать время
+            button(type='submit').btn Хочу попробовать
