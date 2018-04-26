@@ -1,5 +1,9 @@
-mixin header(name)
-  - name = name || ''
+extends ../layout/thpage_layout
+
+block head
+  - var title = 'Спасибо за заявку'
+  // meta(http-equiv='refresh', content= '3; URL=index.html')
+block content
   header(class="header " + name)
     .universall-line   
       .container  
@@ -32,11 +36,10 @@ mixin header(name)
         .col
           h1.h1.h1--top Клуб VR в Одессе 
           .slogan 
-            span ПОПРОБУЙ НА ВКУС  <br> 
-            span ВИРТУАЛЬНУЮ РЕАЛЬНОСТЬ
-          .subtitle Получи улётные эмоции наяву - играй один и с друзьями
+            span Спасибо за заявку
+          .subtitle Проверьте вашу почту 
         
-      .row
+      //- .row
         .col.col--header-block-row
           .header-block.header-block--f
             .header-block__title &gt; 25
@@ -44,7 +47,7 @@ mixin header(name)
           .header-block.header-block--s
             .header-block__title Сетевой режим
             .header-block__desc С участием 4-х человек одновременно        
-      .row
+      //- .row
         .col.col--header-block-row2
           .header-block.header-block--t
             .header-block__title 
@@ -53,52 +56,12 @@ mixin header(name)
             .header-block__desc Шлемы с полным погружением
           .header-block.header-block--fr
             .header-block__title Цена
-            .header-block__desc Самая низкая<br> в городе
+            .header-block__desc Самая низкая в городе
 
-      .row
+      //- .row
         .col
           .btn-block.btn-block--header
             .btn-wrap
               a.btn.easyscroll(href="#pricing") Забронировать время
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//- 

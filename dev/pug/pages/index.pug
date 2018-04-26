@@ -123,35 +123,107 @@ block content
         .row
           .col
             h2.h2 СКОЛЬКО СТОИТ <span>ДРАЙВ?</span>
+            .pricing__slogan Наши цены самые низкие в городе – хочешь, проверяй
 
-            div(style='clear:both;')
-            iframe#fhesus46857(src='https://hesus.ru/hesus/visor2/id/6857', style='width: 100%;height:773px;margin: 0 auto;display: block;', frameborder='0', marginheight='0', marginwidth='0')
-            div(style='clear:both;')
-            // BEGIN BUKZA CODE
-            #BukzaContainer
-            script(type='text/javascript').
-              (function(){
-              var d = document;
-              var w = window;
-              function l() {
-              var s = d.createElement('script');
-              s.type = 'text/javascript';
-              s.async = true;
-              s.src = 'https://bukza.com/api/script/generate/4480/5302/BukzaContainer';
-              var ss = d.getElementsByTagName('script')[0];
-              ss.parentNode.insertBefore(s, ss);
-              }
-              if (d.readyState == 'complete') {
-              l();
-              } else {
-              if (w.attachEvent) {
-              w.attachEvent('onload', l);
-              } else {
-              w.addEventListener('load', l, false);
-              }
-              }
-              })();
-            // END BUKZA CODE
+            .pricing__block
+              .pricing__block-l
+                .pricing__block-row
+                  .pricing__block-row-l
+                    .pricing__block-title Будние дни
+                  .pricing__block-row-r
+                    .pricing__block-min 60 минут
+                .pricing__block-row
+                  .pricing__block-row-l
+                    .pricing__block-time До 19:00:
+                  .pricing__block-row-r
+                    .pricing__block-price 170 
+                      span грн
+                .pricing__block-row
+                  .pricing__block-row-l
+                    .pricing__block-time После 19:00:
+                  .pricing__block-row-r
+                    .pricing__block-price 230
+                      span грн
+              .pricing__block-r 
+                span Забронировать
+
+
+
+            .pricing__block
+              .pricing__block-l
+                .pricing__block-row
+                  .pricing__block-row-l
+                    .pricing__block-title Выходные
+                  .pricing__block-row-r
+                    .pricing__block-min 60 минут
+                .pricing__block-row
+                  .pricing__block-row-l
+                    .pricing__block-time До 19:00:
+                  .pricing__block-row-r
+                    .pricing__block-price 230
+                      span грн
+                .pricing__block-row
+                  .pricing__block-row-l
+                    .pricing__block-time После 19:00:
+                  .pricing__block-row-r
+                    .pricing__block-price 230
+                      span грн
+              .pricing__block-r 
+                span Забронировать
+
+ 
+            .work-time 
+              .work-time__title: span Время работы клуба
+              .work-time__content
+                .work-time__item Пн-чт
+                  span 14:00- 23:00
+                .work-time__item Пт 
+                  span 14:00-00:00
+                .work-time__item Сб-вс
+                  span 12:00-00:00
+
+
+
+
+
+
+
+
+
+
+
+
+          .col
+            h2.h2 ЗАБРОНИРУЙТЕ ВРЕМЯ
+            .pricing__content-iframe
+              div(style='clear:both;')
+              iframe#fhesus46857(src='https://hesus.ru/hesus/visor2/id/6857', style='width: 100%;height:773px;margin: 0 auto;display: block;', frameborder='0', marginheight='0', marginwidth='0')
+              div(style='clear:both;')
+            //- // BEGIN BUKZA CODE
+            //- #BukzaContainer
+            //- script(type='text/javascript').
+            //-   (function(){
+            //-   var d = document;
+            //-   var w = window;
+            //-   function l() {
+            //-   var s = d.createElement('script');
+            //-   s.type = 'text/javascript';
+            //-   s.async = true;
+            //-   s.src = 'https://bukza.com/api/script/generate/4480/5302/BukzaContainer';
+            //-   var ss = d.getElementsByTagName('script')[0];
+            //-   ss.parentNode.insertBefore(s, ss);
+            //-   }
+            //-   if (d.readyState == 'complete') {
+            //-   l();
+            //-   } else {
+            //-   if (w.attachEvent) {
+            //-   w.attachEvent('onload', l);
+            //-   } else {
+            //-   w.addEventListener('load', l, false);
+            //-   }
+            //-   }
+            //-   })();
+            //- // END BUKZA CODE
 
 
 
@@ -231,15 +303,15 @@ block content
             h2.h2 Как нас найти
         .row.row--find
           .find__item.find__item--info
-            a.find__option.find__option--phone(href="tel:+380996514812")
+            a.find__option.find__option--phone(href="tel:++380996514812")
               +svg('phone')
-              span +380 996-514-812
+              span +38 (099) 651-48-12
             .find__option.find__option--marker
               +svg('point')
               span г. Одесса, ул. Асташкина 15
-            a.find__option.find__option--mail(href="mailto:vrzoneodessa@gmail.com")
+            a.find__option.find__option--mail(href="mailto:info@vrzone.com.ua")
               +svg('mail')
-              span vrzoneodessa@gmail.com
+              span info@vrzone.com.ua
 
           .find__item.find__item--map
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2747.5570340519007!2d30.72143901559164!3d46.477281479125914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c6318e6971a2b9%3A0x7753be513cf72670!2z0YPQuy4g0JDRgdGC0LDRiNC60LjQvdCwLCAxNSwg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1524693547534" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>

@@ -7,17 +7,63 @@ $(function() {
 
     var $form = $('.form');
 
-    $form.on('click', function(event) {
-        var formId = $(this).attr("id");
-        // console.log('formId ' + formId); 
-        localStorage.setItem('form', formId);
-        var pageName = window.location.pathname;
-        // console.log('pageName ' + pageName);
-        localStorage.setItem('currentPage', pageName);
-    });
+    // $form.on('click', function(event) {
+    //     var formId = $(this).attr("id");
+    //     // console.log('formId ' + formId); 
+    //     localStorage.setItem('form', formId);
+    //     var pageName = window.location.pathname;
+    //     // console.log('pageName ' + pageName);
+    //     localStorage.setItem('currentPage', pageName);
+    // });
 
-    //	E-mail Ajax Send
+    //  E-mail Ajax Send
     $form.each(function() {
+        //    var $this = $(this);
+        $(this).validate({
+
+            // rules: {
+            //  phone: {
+            //      required: true,
+            //      minlength: 6,
+            //      number: true
+            //  }
+            // }, 
+
+            submitHandler: function(form) {
+                var formData = new FormData(form);
+                $.ajax({
+                    type: "POST",
+                    url: "mail.php",
+                    data: formData,
+                    contentType: false,
+                    dataType: "json",
+                    processData: false,
+                    beforeSend: function() {
+                        $(form).find('.btn').attr("disabled", true);
+                        $(form).find('.form-load').css({
+                            'width': '20px',
+                            'margin-left': '10px'
+                        });
+                        console.log('before send')
+                    }
+                }).done(function() {
+                    $(form).find('.btn').attr("disabled", false);
+                    $(form).find('.form-load').css({
+                        'width': '0',
+                        'margin-left': '0'
+                    });
+                    $(form).trigger("reset");
+                    $.magnificPopup.close();
+                    window.location.href = "thanks.html";
+                    console.log('done')
+                }).fail(function() {
+                    alert("Error, email not sent !");
+                    console.log('error')
+                });
+            }
+        });
+    });  //	E-mail Ajax Send
+   $('.form--discount').each(function() {
         //    var $this = $(this);
         $(this).validate({
 
@@ -54,7 +100,7 @@ $(function() {
                     });
                     $(form).trigger("reset");
                     $.magnificPopup.close();
-                    window.location.href = "thanks.html";
+                    window.location.href = "thanks_dis.html";
                     console.log('done')
                 }).fail(function() {
                     alert("Error, email not sent !");
@@ -446,7 +492,7 @@ function pageWidget(pages) {
     var widgetStilization = $('<style>body{position:relative}.widget_wrap{position:fixed;top:0;left:-23px;z-index:9999;padding:10px 20px;background:#222;border-bottom-right-radius:10px;transition:all .3s ease;transform:translate(-100%,0)}.widget_wrap ul{max-width:220px;width:100%;display:flex;flex-wrap:wrap}.widget_wrap:after{content:" ";position:absolute;top:0;left:100%;width:24px;height:24px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAAAxQTFRF////////AAAA////BQBkwgAAAAN0Uk5TxMMAjAd+zwAAACNJREFUCNdjqP///y/DfyBg+LVq1Xoo8W8/CkFYAmwA0Kg/AFcANT5fe7l4AAAAAElFTkSuQmCC) 50% 50% no-repeat #222;cursor:pointer}.widget_wrap:hover{left:0;transform:translate(0,0)}.widget_item{padding:0 0 10px}.widget_link{display:block;color:#fff;text-decoration:none;font-size:15px;width:100px}.widget_link:hover{color:#fff;text-decoration:underline}</style>');
     widgetStilization.prependTo(".widget_wrap")
 };
-pageWidget(['index', 'thanks'])
+pageWidget(['index', 'thanks_dis', 'thanks'])
 
 
 //pixel-glass-js-master
